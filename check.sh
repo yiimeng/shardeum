@@ -7,7 +7,7 @@ do
     then
         echo $(date)
         echo "START SHARDEUM"
-        docker exec shardeum-dashboard operator-cli start
+        docker exec shardeum-dashboard operator-cli stop && docker exec shardeum-dashboard operator-cli start 
     fi
     sleep 1m
 done
